@@ -23,3 +23,9 @@ def create_game(mat,card_lst):
             mat[i][j] = card
             card_lst.remove(card)
     return mat
+
+def  choose_card():
+    card1 = input("enter the place of the first card ")
+    card2 = input("enter the place of the second card ")
+    return card1,card2
+
