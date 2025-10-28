@@ -1,7 +1,12 @@
 import random
 def choose_size():
-    size = int(input("choose the size of the game "))
-    return size
+    while True:
+        size = int(input("choose the size of the game "))
+        if size % 2 != 0:
+            print("only even numbers")
+            continue
+        else:
+            return size
 
 def game_board_matrix(size,fill = 0):
     mat = []
