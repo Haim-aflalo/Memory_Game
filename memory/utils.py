@@ -1,4 +1,8 @@
 import random
+def choose_size():
+    size = int(input("choose the size of the game "))
+    return size
+
 def game_board_matrix(size,fill = 0):
     mat = []
     for i in range(size):
@@ -28,6 +32,10 @@ def create_game(size,card_lst):
     return mat
 
 def  choose_card():
-    card1 = input("enter the place of the first card ")
-    card2 = input("enter the place of the second card ")
-    return card1,card2
+    card_x = int(input("enter the column of the first card "))-1
+    card_y = int(input("enter the line of the first card "))-1
+
+    return card_x,card_y
+
+def is_won(mat1,mat2):
+    return mat1 == mat2
