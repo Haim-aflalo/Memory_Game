@@ -1,7 +1,14 @@
 import random
+
+
+
 def choose_size():
     while True:
-        size = int(input("choose the size of the game "))
+        size_str = input("choose the size of the game ")
+        if not size_str.isdigit():
+            print("only numbers")
+            continue
+        size = int(size_str)
         if size % 2 != 0:
             print("only even numbers")
             continue
@@ -37,10 +44,18 @@ def create_game(size,card_lst):
     return mat
 
 def  choose_card():
-    card_x = int(input("enter the column of the card "))-1
-    card_y = int(input("enter the line of the card "))-1
-
-    return card_x,card_y
+    while True:
+        card_x_str = input("enter the column of the card ")
+        if not card_x_str.isdigit():
+            print("only numbers")
+            continue
+        card_x = int(card_x_str)-1
+        card_y_str = input("enter the line of the card ")
+        if not card_y_str.isdigit():
+            print("only numbers")
+            continue
+        card_y = int(card_y_str)-1
+        return card_x,card_y
 
 def is_won(mat1,mat2):
     return mat1 == mat2
