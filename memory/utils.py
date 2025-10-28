@@ -32,8 +32,8 @@ def create_game(size,card_lst):
     return mat
 
 def  choose_card():
-    card_x = int(input("enter the column of the first card "))-1
-    card_y = int(input("enter the line of the first card "))-1
+    card_x = int(input("enter the column of the card "))-1
+    card_y = int(input("enter the line of the card "))-1
 
     return card_x,card_y
 
